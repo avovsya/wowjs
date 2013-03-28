@@ -102,10 +102,9 @@
 
                 // setup click handler for navigation links
                 $wow.controls.navigation.delegate('.navigation-link', 'click', function (e) {
-                    var wow = $wow;
                     e.preventDefault();
                     var index = parseInt($(this).data('slide-index'));
-                    functions.nthSlide(wow, index);
+                    functions.nthSlide($wow, index);
                 });
 
             }
@@ -160,10 +159,8 @@
                     functions.nextSlide($wow);
                 });
 
-                $wow
-                    .append($wow.controls.prevArrow)
-                    .append($wow.controls.nextArrow)
-                    .prependTo($wow);
+                $wow.append($wow.controls.prevArrow);
+                $wow.append($wow.controls.nextArrow);
             }
 
             functions.makeCurrent($wow, $wow.current);
