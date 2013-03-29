@@ -69,7 +69,7 @@
                 return;
             }
             this.makeCurrent($wow, nextSlide);
-        },
+        }
     };
 
     $.fn.wow = function (options) {
@@ -164,6 +164,6 @@
             }
 
             functions.makeCurrent($wow, $wow.current);
-        })
-    }
-})(jQuery)
+        });
+    };
+})(jQuery);
